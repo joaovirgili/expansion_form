@@ -1,8 +1,7 @@
 name: expansion_form
 description: Form with expansion items.
 version: 0.0.1
-author: joaovirgili
-homepage: 
+homepage: https://github.com/joaovirgili/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
