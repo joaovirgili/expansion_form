@@ -86,9 +86,10 @@ class FiltroState extends State<Filtro> {
   }
 
   /// Callback for item collapse
-  _onItemCollapsed(FiltroItemModel item) {
+  _onItemCollapsed(FiltroItemModel item) async {
     final itemIndex = _getItemIndex(item.key);
     if (!_isLastItem(itemIndex)) {
+      await Future.delayed(Duration(milliseconds: 400));
       _expandItemByIndex(itemIndex + 1);
     }
   }
