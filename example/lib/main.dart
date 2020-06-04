@@ -23,12 +23,19 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+  GlobalKey<FiltroState> filtroKey;
   var isFormValid = false;
 
   _onValidationChange(bool value) {
     setState(() {
       isFormValid = value;
     });
+  }
+
+  @override
+  void initState() {
+    filtroKey = GlobalKey<FiltroState>();
+    super.initState();
   }
 
   @override
@@ -40,6 +47,7 @@ class _MyWidgetState extends State<MyWidget> {
       body: Column(
         children: <Widget>[
           Filtro(
+            key: filtroKey,
             onValidateChange: _onValidationChange,
             items: [
               FiltroItemModel(
@@ -48,78 +56,6 @@ class _MyWidgetState extends State<MyWidget> {
                 dependents: ["rede"],
                 isRequired: true,
                 options: [
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "ba",
-                    name: "Bahia",
-                  ),
-                  FiltroItemOptionModel(
-                    key: "rj",
-                    name: "Rio de Janeiro",
-                  ),
                   FiltroItemOptionModel(
                     key: "ba",
                     name: "Bahia",
@@ -212,7 +148,11 @@ class _MyWidgetState extends State<MyWidget> {
             ],
           ),
           RaisedButton(
-            onPressed: isFormValid ? () {} : null,
+            onPressed: isFormValid
+                ? () {
+                    print(filtroKey.currentState.selectedOptions);
+                  }
+                : null,
             child: Text("Confirm"),
           ),
         ],

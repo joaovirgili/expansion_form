@@ -78,6 +78,9 @@ class FiltroState extends State<Filtro> {
   bool formValid = false;
   final controller = FiltroController();
 
+  Map<String, FiltroItemOptionModel> get selectedOptions =>
+      controller.selectedOptions;
+
   /// Generate and store a GlobalKey for each Item
   List<GlobalKey<FiltroItemWidgetState>> _generateGlobalKeys() {
     return widget.items.map((e) {
