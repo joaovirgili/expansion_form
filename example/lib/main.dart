@@ -1,5 +1,4 @@
-import 'package:filtro/filtro_widget.dart';
-import 'package:filtro/shared/models/filtro_item_option_model.dart';
+import 'package:expansion_form/expansion_form.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,6 +48,78 @@ class _MyWidgetState extends State<MyWidget> {
                 dependents: ["rede"],
                 isRequired: true,
                 options: [
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "ba",
+                    name: "Bahia",
+                  ),
+                  FiltroItemOptionModel(
+                    key: "rj",
+                    name: "Rio de Janeiro",
+                  ),
                   FiltroItemOptionModel(
                     key: "ba",
                     name: "Bahia",
